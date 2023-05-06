@@ -1,0 +1,53 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/ProximaNova-Bold.otf",
+      "sha1": "c64eb12f22734e49504a6e04eb291dfcca5456b8"
+    },
+    {
+      "path": "src/assets/fonts/ProximaNova-BoldIt.otf",
+      "sha1": "0f354e1b74b667ed584b7e88973e732a2951da0a"
+    },
+    {
+      "path": "src/assets/fonts/ProximaNova-Extrabld.otf",
+      "sha1": "6ab06bbc07fc50184dafcb2afc33122c01e2f2ee"
+    },
+    {
+      "path": "src/assets/fonts/ProximaNova-ExtrabldIt.otf",
+      "sha1": "0d68aaa10d5a0f6e7c3685d2916fb5aa0e300e8a"
+    },
+    {
+      "path": "src/assets/fonts/ProximaNova-Light.otf",
+      "sha1": "b8601dbf93e42f4b49d88a82e918d3e3e5ad7201"
+    },
+    {
+      "path": "src/assets/fonts/ProximaNova-LightIt.otf",
+      "sha1": "c03cdfeec42dd3cbb6133e70b1705d5daa0781a4"
+    },
+    {
+      "path": "src/assets/fonts/ProximaNova-Medium.otf",
+      "sha1": "71b8faa48110acb9517513ae629e36d719c4a85d"
+    },
+    {
+      "path": "src/assets/fonts/ProximaNova-MediumIt.otf",
+      "sha1": "08b49fa15a538d2d09a3492555940fb48e738c9d"
+    },
+    {
+      "path": "src/assets/fonts/ProximaNova-Regular.otf",
+      "sha1": "5b8779e30454479a2550dea827a05da4e352d9e4"
+    },
+    {
+      "path": "src/assets/fonts/ProximaNova-RegularIt.otf",
+      "sha1": "5d61dd82f3d9d9ece59e3f541de7588a8499aad5"
+    },
+    {
+      "path": "src/assets/fonts/ProximaNova-Semibold.otf",
+      "sha1": "6110dd0c5ca066cb9e9ca57d34692d153d7d090f"
+    },
+    {
+      "path": "src/assets/fonts/ProximaNova-SemiboldIt.otf",
+      "sha1": "d0957a6bcc73019081f83a6ee50c64972c018af6"
+    }
+  ]
+}

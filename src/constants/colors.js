@@ -1,0 +1,32 @@
+const colors = {
+    white: "#FFFFFF",
+    background: "#FF704E",
+    backgroundTwo: "#F2F4F6",
+    black: "#000000",
+    textColor: "#1C1C1C",
+    textColorTwo: "#063237",
+    textColorThree: "#1D1D1D",
+    textColorFour: "#677987",
+    lightgrey: '#666666',
+    lightgreyTwo: "#BCC8D1",
+    borderColor: "#E6E6E6",
+    red: "#EE2C37",
+    lightBlue: "#CCDFE5",
+    dark: "#1D1D1F",
+    lightblue: "#1877F2",
+    lightBlueTwo: "#2492FF",
+    lightBackground: "#C0C0C0",
+    lightBackgroundTwo: "#F6F9FB",
+    skyBlue: "#1A8CD8",
+    orange: '#FF704E',
+    lightgreyThree: "#F6F7F9",
+    lightOrange: "#E5D6CA",
+    textColorGreen: "#47C991",
+    textLight: "#595F66",
+    textColorFive: "#090B18",
+    backgroundBlue: '#6360F8',
+    textColorSix: "#3A4D5B",
+    lightBlack: "#707070"
+}
+
+export { colors };

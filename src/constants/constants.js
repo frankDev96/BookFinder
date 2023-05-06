@@ -1,0 +1,5 @@
+export const SHOW_ALERT = "SHOW_ALERT"
+export const LOADER = "LOADER"
+export const FAVORITE_BOOKS = "FAVORITE_BOOKS"
+export const BOOK_LIST = "BOOK_LIST"
+export const RECENT_SEARCH = "RECENT_SEARCH"
