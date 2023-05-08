@@ -1,4 +1,4 @@
-import { View, Text, StatusBar } from 'react-native'
+import { View, Text, StatusBar, ImageBackground } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { useSelector, useDispatch } from 'react-redux';
@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 import isEmpty from 'lodash/isEmpty'
 
 import { colors } from '../constants/colors'
-import { logo } from '../assets/images'
+import { splash } from '../assets/images'
 import { WIDTH, HEIGHT } from '../constants/dimensions'
 import { commonAction, joinDataAction } from '../redux/actions'
 import { commonStyle } from '../constants/styles'
@@ -36,9 +36,9 @@ const SplashScreen = (props, context) => {
 
     return (
         <View style={{ flex: 1, backgroundColor: colors.white, alignItems: "center", justifyContent: "center" }}>
-            <StatusBar barStyle={"light-content"} backgroundColor={colors.white} />
+            <StatusBar translucent barStyle={"dark-content"} backgroundColor={colors.white} />
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                <Text>SplashScreen</Text>
+                <Text style={{ color: colors.textColor, fontSize: 20, fontWeight: 'bold' }} >BookFinder</Text>
             </View>
         </View>
     )
