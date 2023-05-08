@@ -14,6 +14,7 @@ import { HEIGHT, WIDTH } from '../constants/dimensions'
 import { colors } from '../constants/colors'
 import { commonAction } from '../redux/actions'
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { BOOK_LIST } from '../constants/constants';
 
 const HomeScreen = (props, context) => {
   const dispatch = useDispatch()
@@ -80,7 +81,13 @@ const HomeScreen = (props, context) => {
         boxStyle={{ borderWidth: 1, marginHorizontal: WIDTH * 0.05, borderRadius: WIDTH * 0.01, borderColor: colors.borderColor, }}
         onSubmitEditing={() => { searchText?.length > 0 && dispatch(commonAction.searchBooksList(searchText, 0)) }}
         showClearButton={searchText?.length > 0}
-        onClear={() => { setSearchText("") }}
+        onClear={() => {
+          setSearchText("")
+          dispatch({
+            type: BOOK_LIST,
+            payload: []
+          })
+        }}
       />
       {recentSearchList?.length > 0 && searchText?.length == 0 && <FlatList
         data={[...new Set(recentSearchList.map(x => x))].slice(0, 5)}

@@ -96,9 +96,9 @@ const BooksListRenderItem = (props, context) => {
         p: { margin: 0, color: colors.lightBlack, fontSize: 14, ...commonStyle.fontRegular(), }
     }
     const systemFonts = [...defaultSystemFonts, 'ProximaNova-Regular']
-
+console.log("imageLinks___smallThumbnail__",imageLinks?.smallThumbnail);
     return (<>
-        <Pressable onPress={() => { getBookDetails(id) }} style={{ borderWidth: 1, marginHorizontal: WIDTH * 0.05, width: WIDTH * 0.9, marginBottom: HEIGHT * 0.01, flexDirection: 'row', borderRadius: WIDTH * 0.02, padding: WIDTH * 0.02, borderColor: `${colors.borderColor}` }}>
+        <Pressable onPress={() => { getBookDetails(id) }} style={{ borderWidth: 1, marginHorizontal: WIDTH * 0.05, width: WIDTH * 0.9, marginBottom: HEIGHT * 0.01, flexDirection: 'row', borderRadius: WIDTH * 0.02, padding: WIDTH * 0.02, borderColor: `${colors.borderColor}`, elevation: 2, shadowColor: colors.black, shadowOpacity: 0.1, shadowRadius: 8, shadowOffset: { width: 0, height: 5, }, backgroundColor: colors.white, }}>
             <View style={{ height: HEIGHT * 0.2, width: WIDTH * 0.3, borderRadius: WIDTH * 0.02, alignItems: 'center', justifyContent: 'center', overflow: 'hidden', marginRight: WIDTH * 0.02, borderColor: `${colors.borderColor}`, borderWidth: 1 }}>
                 <FastImageComponent resizeMode={"contain"} defaultSource={placeholderImage} url={imageLinks?.smallThumbnail} style={{ height: HEIGHT * 0.2, width: WIDTH * 0.3, borderRadius: WIDTH * 0.02 }} />
             </View>
@@ -108,7 +108,7 @@ const BooksListRenderItem = (props, context) => {
                     <Text numberOfLines={2} style={[commonStyle.fontRegular(lang), commonStyle.textAlign(lang), { fontSize: 12, color: colors.lightgrey, marginTop: HEIGHT * 0.005 }]}>{subtitle}</Text>
                 </View>
 
-                <Text numberOfLines={2} style={[commonStyle.fontRegular(lang), commonStyle.textAlign(lang), { fontSize: 15, color: colors.lightgrey }]}>{context.t("author")}{": "}<Text numberOfLines={2} style={[commonStyle.fontRegular(lang), commonStyle.textAlign(lang), { fontSize: 15, color: colors.lightgrey }]}>{authors?.[0]}</Text></Text>
+                {authors?.[0] && <Text numberOfLines={2} style={[commonStyle.fontRegular(lang), commonStyle.textAlign(lang), { fontSize: 15, color: colors.lightgrey }]}>{context.t("author")}{": "}<Text numberOfLines={2} style={[commonStyle.fontRegular(lang), commonStyle.textAlign(lang), { fontSize: 15, color: colors.lightgrey }]}>{authors?.[0]}</Text></Text>}
             </View>
             <Pressable onPress={() => { }} style={{}} >
                 <FavoriteComponent wishlist_status={wishlist_status} onPressAction={() => favoriteAction(props)} />
@@ -121,14 +121,14 @@ const BooksListRenderItem = (props, context) => {
             <View style={{ backgroundColor: colors.white, borderTopRightRadius: WIDTH * 0.03, borderTopLeftRadius: WIDTH * 0.03, minHeight: HEIGHT * 0.2, paddingHorizontal: WIDTH * 0.05, paddingBottom: HEIGHT * 0.05 }} >
                 <ScrollView showsVerticalScrollIndicator={false} >
                     <View style={{ height: HEIGHT * 0.4, width: WIDTH * 0.9, borderRadius: WIDTH * 0.02, alignItems: 'center', justifyContent: 'center', overflow: 'hidden', marginRight: WIDTH * 0.02, borderColor: `${colors.borderColor}`, borderWidth: 1, marginTop: HEIGHT * 0.02 }}>
-                        <FastImageComponent resizeMode={"contain"} defaultSource={placeholderImage} url={showModal?.data?.imageLinks?.smallThumbnail} style={{ height: HEIGHT * 0.4, width: WIDTH * 0.9, borderRadius: WIDTH * 0.02 }} />
+                        <FastImageComponent resizeMode={"contain"} defaultSource={placeholderImage} url={imageLinks?.smallThumbnail} style={{ height: HEIGHT * 0.4, width: WIDTH * 0.9, borderRadius: WIDTH * 0.02 }} />
                     </View>
                     <View style={{ flex: 1, marginTop: HEIGHT * 0.02 }}>
                         <Text style={[commonStyle.fontBold(lang), commonStyle.textAlign(lang), { fontSize: 18, color: colors.lightgrey }]}>{showModal?.data?.volumeInfo?.title}</Text>
                         <Text style={[commonStyle.fontRegular(lang), commonStyle.textAlign(lang), { fontSize: 12, color: colors.lightgrey, marginTop: HEIGHT * 0.005 }]}>{showModal?.data?.volumeInfo?.subtitle}</Text>
                     </View>
                     <View style={[commonStyle.flexDirection(lang), { alignItems: 'center', justifyContent: 'space-between' }]}>
-                        <Text style={[commonStyle.fontRegular(lang), commonStyle.textAlign(lang), { fontSize: 15, color: colors.lightgrey, marginTop: HEIGHT * 0.01 }]}>{context.t("author")}{": "}<Text numberOfLines={2} style={[commonStyle.fontRegular(lang), commonStyle.textAlign(lang), { fontSize: 15, color: colors.lightgrey, }]}>{showModal?.data?.volumeInfo?.authors?.[0]}</Text></Text>
+                        {authors?.[0] ? <Text style={[commonStyle.fontRegular(lang), commonStyle.textAlign(lang), { fontSize: 15, color: colors.lightgrey, marginTop: HEIGHT * 0.01 }]}>{context.t("author")}{": "}<Text numberOfLines={2} style={[commonStyle.fontRegular(lang), commonStyle.textAlign(lang), { fontSize: 15, color: colors.lightgrey, }]}>{showModal?.data?.volumeInfo?.authors?.[0]}</Text></Text>:<View />}
                         <Pressable onPress={() => { }} style={{}} >
                             <FavoriteComponent wishlist_status={wishlist_status} onPressAction={() => favoriteAction(props)} />
                         </Pressable>
